@@ -1,0 +1,166 @@
+//import css libraries
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~materialize-css/dist/css/materialize.css';
+@import '../../../scss/common.scss';
+.nav-bar-logo {
+    padding: 4px;
+    margin: 0
+}
+
+.img-header-size {
+    height: 60px
+}
+
+.img-setup {
+    background-color: white;
+    margin-top: 16px;
+    padding-left: 15px;
+    height: 50px;
+}
+
+.tabs .tab a {
+    color: black !important;
+    font-weight: bold;
+}
+
+.tabs .tab:hover {
+    border-bottom: 4px solid $primary !important;
+    a {
+        color: $primary !important;
+        text-decoration: none;
+    }
+}
+
+.nav-extended {
+    padding-top: 5px;
+}
+
+.nav-content {
+    margin-top: 10px
+}
+
+.nav-bar-logo img {
+    height: 44px;
+}
+
+.branch-name {
+    color: black
+}
+
+.branch-name-tiny {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.nav-fixed-top {
+    background-color: white;
+}
+
+//tabbed-nav-bar
+
+/* Default mode */
+
+.tabbable-line>.nav-tabs {
+    border: none;
+    margin: 0px;
+}
+
+.tabbable-line>.nav-tabs>li {
+    margin-right: 2px;
+}
+
+.tabbable-line>.nav-tabs>li>a {
+    border: 0;
+    margin-right: 0;
+    color: #000000;
+}
+
+.tabbable-line>.nav-tabs>li>a>i {
+    color: #020202;
+}
+
+.tabbable-line>.nav-tabs>li:hover>a {
+    color: $primary;
+}
+
+.tabbable-line>.nav-tabs>li:hover>a>i {
+    color: $primary;
+}
+
+.tabbable-line>.nav-tabs>li.open,
+.tabbable-line>.nav-tabs>li:hover {
+    border-bottom: 4px solid $primary;
+}
+
+.tabbable-line>.nav-tabs>li.open>a,
+.tabbable-line>.nav-tabs>li:hover>a {
+    border: 0;
+    background: none !important;
+    color: #333333;
+}
+
+.tabbable-style {
+    padding: 10px 0 0 0;
+    cursor: pointer
+}
+
+.glyphicon-search {
+    color: #fff
+}
+
+.dropdown-menu.show[_ngcontent-c1] {
+    position: absolute;
+    transform: translate3d(0px, 0px, 0px);
+    top: 44px !important;
+    left: -51px !important;
+    will-change: transform;
+}
+
+.signout {
+    border-top: 1px solid $default;
+}
+
+nav[_ngcontent-c1] .nav-wrapper[_ngcontent-c1] i[_ngcontent-c1] {
+    height: 0 !important;
+    line-height: 17px !important;
+    font-size: 17px !important;
+    padding: 0 0 0 70px !important;
+}
+
+.dropdown-menu.show[_ngcontent-c1][_ngcontent-c1] {
+    position: absolute;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+    top: 44px !important;
+    left: 8px !important;
+    will-change: transform;
+    padding: 0 0 0 45px !important;
+}
+
+.dropdown i {
+    position: fixed;
+    right: 77%;
+    top: 37%;
+}
+
+div.top-dropdown-menu:hover {
+    background-color: $hover !important;
+    cursor: pointer !important;
+}
+
+.tab.active {
+    background-color: $primary !important;
+}
+
+.tabs .tab.active {
+    background-color: $primary;
+    a {
+        color: #fff !important;
+    }
+}
+
+.tabs .tab.active:hover {
+    a {
+        color: white !important
+    }
+}

@@ -1,0 +1,61 @@
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    <div class="panel panel-primary height">
+        <div class="panel-body">
+            <h1>{{title}}</h1>
+            <!-- button group -->
+            <div class="d-flex flex-row-reverse">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 p-2 mr-3">
+                    <button class="btn btn-md btn-primary float-right" (click)="open(content)"><i class="fa fa-plus fa-lg"></i> Thêm</button>
+                </div>
+            </div>
+            <div class="horizontal-scroll col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <table class="table table-hover">
+                    <thead class="thead-primary">
+                        <tr>
+                            <td></td>
+                            <td>Tên</td>
+                            <td>Ngày Sinh</td>
+                            <td>Số Điện Thoại</td>
+                            <td>Ngày Tạo</td>
+                            <td>Xóa</td>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let employee of employeeList; let i = index">
+                        <tr>
+                            <td>{{i+1}}</td>
+                            <td>{{employee.Name}}</td>
+                            <td>{{employee.Birthday | date: "dd/MM/yyyy"}}</td>
+                            <td>{{employee.Phone}}</td>
+                            <td>{{employee.CreatedDate| date: "dd/MM/yyyy"}}</td>
+                            <td>
+                                <div class="row btn-rows">
+                                    <div>
+                                        <button class="btn btn-danger btn-sm" (click)="DeleteBranch(branch.Id)"><i class="fa fa-ban fa-lg" aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- <div class="col-md-12 text-center">
+              <p class="table-notification">Data Not Found</p>
+          </div> -->
+        </div>
+    </div>
+</div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h4 class="modal-title">Modal title</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    <div class="modal-body">
+        <p>One fine body&hellip;</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+    </div>
+</ng-template>

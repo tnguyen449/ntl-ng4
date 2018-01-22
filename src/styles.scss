@@ -1,0 +1,13 @@
+//import css libraries
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'scss/common.scss';
+@import '../node_modules/font-awesome/scss/font-awesome.scss';
+@import '../src/scss/common.scss';
+//customize app styles
+
+/** wprapper main **/
+
+.app-main {
+    padding-top: 150px;
+    min-height: 500px
+}

@@ -1,0 +1,29 @@
+<nav class="nav-extended bg-white text-dark fixed-top">
+    <div class="nav-wrapper" (window:resize)="onResize($event)">
+        <a href="#" class="brand-logo"><img src="/assets/logo.png" class="img-header-size" alt="Company Logo"></a>
+        <div class="right hide-on-med-and-down mr-5" ngbDropdown [hidden]="tinySize==true">
+            <span class="branch-name">Nguyen Thanh Trung </span>
+            <a id="dropdownBasic1" ngbDropdownToggle><img class="rounded-circle float-right img-setup" src="/assets/img/no-profile.png" alt="profile-picture"></a>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="top-dropdown-menu">
+                <a><span><i class="fa fa-power-off "></i></span> Đăng xuất</a>
+            </div>
+        </div>
+    </div>
+    <div class="row" [hidden]="tinySize==false">
+        <div class="col">
+            <div class="float-left">
+                <span class="branch-name-tiny ml-4">Nguyen Thanh Trung</span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="float-right">
+                <a><span class="branch-name-tiny mr-4">Đăng xuất</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="nav-content">
+        <ul class="tabs tabs-transparent">
+            <li class="tab" *ngFor="let route of routes" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><a [routerLink]="route.Path"> {{route.Title}}</a></li>
+        </ul>
+    </div>
+</nav>

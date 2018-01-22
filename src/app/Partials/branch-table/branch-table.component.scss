@@ -1,0 +1,22 @@
+//import css librabries
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '../../../scss/common.scss';
+//customize component styles
+.table-notification {
+    color: grey;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 50px;
+}
+
+.thead-primary {
+    background-color: $primary;
+    color: white;
+    font-weight: bold;
+}
+
+//hover in table row
+.table-hover>tbody>tr:hover {
+    background-color: $primary;
+    color: white;
+}

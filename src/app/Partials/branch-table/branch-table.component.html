@@ -1,0 +1,46 @@
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    <div class="panel panel-primary height">
+        <div class="panel-body">
+            <h1>{{title}}</h1>
+            <!-- button group -->
+            <div class="d-flex flex-row-reverse">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 p-2 mr-3">
+                    <button class="btn btn-md btn-primary float-right" data-toggle="modal" data-target="#branch-modal"><i class="fa fa-plus fa-lg"></i> Thêm</button>
+                </div>
+            </div>
+            <div class="horizontal-scroll col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <table class="table table-hover">
+                    <thead class="thead-primary">
+                        <tr>
+                            <td></td>
+                            <td>Chi Nhánh</td>
+                            <td>Mã Khu Vực</td>
+                            <td>Địa Chỉ</td>
+                            <td>Số Điện Thoại</td>
+                            <td>Xóa</td>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let branch of branchList; let i = index">
+                        <tr>
+                            <td>{{i+1}}</td>
+                            <td>{{branch.Name}}</td>
+                            <td>{{branch.LocationCode}}</td>
+                            <td>{{branch.Address}}</td>
+                            <td>{{branch.Phone}}</td>
+                            <td>
+                                <div class="row btn-rows">
+                                    <div>
+                                        <button class="btn btn-danger btn-sm" (click)="DeleteBranch(branch.Id)"><i class="fa fa-ban fa-lg" aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- <div class="col-md-12 text-center">
+              <p class="table-notification">Data Not Found</p>
+          </div> -->
+        </div>
+    </div>
+</div>
